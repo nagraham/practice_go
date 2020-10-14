@@ -4,4 +4,4 @@ This directory contains different modules encapsulating llittle practice project
 
 ## Leet Code
 
-**Problem 1**: [Two Sum](https://leetcode.com/problems/two-sum/) -> twosum.go
+**Problem 1**: [Two Sum](https://leetcode.com/problems/two-sum/) -> leetcode/twosum.go

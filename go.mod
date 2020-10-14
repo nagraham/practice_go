@@ -1,1 +1,3 @@
-module "practice_go"
+module practice
+
+go 1.15
