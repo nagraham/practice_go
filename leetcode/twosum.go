@@ -4,7 +4,6 @@ func twoSum(nums []int, target int) []int {
 	return twoSumOne(nums, target)
 }
 
-
 // Return the indices of two different numbers from the given array such that they add to the
 // given target.
 //
@@ -21,11 +20,11 @@ func twoSumOne(nums []int, target int) []int {
 	numMap = mapByIndex(nums)
 
 	for i, num := range nums {
-		indices, hasVal := numMap[target - num]
+		indices, hasVal := numMap[target-num]
 		if hasVal {
 			j, isOtherIndex := someOtherNumber(i, indices)
 			if isOtherIndex {
-				return []int{ i, j }
+				return []int{i, j}
 			}
 		}
 	}
@@ -34,14 +33,14 @@ func twoSumOne(nums []int, target int) []int {
 }
 
 // Given slice of nums: return map with key=number, value=slice of indices
-func mapByIndex(nums[] int) map[int][]int {
+func mapByIndex(nums []int) map[int][]int {
 	numMap := make(map[int][]int)
 	for i, num := range nums {
 		s, hasValue := numMap[num]
 		if hasValue {
 			numMap[num] = append(s, i)
 		} else {
-			numMap[num] = []int{ i }
+			numMap[num] = []int{i}
 		}
 	}
 	return numMap
@@ -67,9 +66,9 @@ func twoSumTwo(nums []int, target int) []int {
 
 	// b/c we loop once, only duplicate values will be present in the map.
 	for index, num := range nums {
-		otherIndex, hasNum := numMap[target - num]
+		otherIndex, hasNum := numMap[target-num]
 		if hasNum {
-			return []int{ index, otherIndex }
+			return []int{index, otherIndex}
 		}
 		numMap[num] = index
 	}
