@@ -1,6 +1,6 @@
 # Practice Go
 
-This directory contains different modules encapsulating llittle practice projects.
+This directory contains different modules encapsulating little practice projects.
 
 ## Leet Code
 
