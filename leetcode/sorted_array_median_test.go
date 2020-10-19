@@ -45,7 +45,7 @@ func TestMedianEmptyList(t *testing.T) {
 }
 
 func TestMedianOneElement(t *testing.T) {
-	m, err := median([]int{ 42 })
+	m, err := median([]int{42})
 	if err != nil {
 		t.Fatal(m)
 	}
@@ -53,7 +53,7 @@ func TestMedianOneElement(t *testing.T) {
 }
 
 func TestMedianTwoElements(t *testing.T) {
-	m, err := median([]int{ 2, 2 })
+	m, err := median([]int{2, 2})
 	if err != nil {
 		t.Fatal(m)
 	}
@@ -61,7 +61,7 @@ func TestMedianTwoElements(t *testing.T) {
 }
 
 func TestMedianMultipleElementsEven(t *testing.T) {
-	m, err := median([]int{ 1, 2, 3, 4, 5, 6 })
+	m, err := median([]int{1, 2, 3, 4, 5, 6})
 	if err != nil {
 		t.Fatal(m)
 	}
@@ -69,7 +69,7 @@ func TestMedianMultipleElementsEven(t *testing.T) {
 }
 
 func TestMedianMultipleElementsOdd(t *testing.T) {
-	m, err := median([]int{ 1, 2, 3, 4, 5 })
+	m, err := median([]int{1, 2, 3, 4, 5})
 	if err != nil {
 		t.Fatal(m)
 	}

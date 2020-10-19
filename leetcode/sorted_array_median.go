@@ -24,7 +24,7 @@ func findMedianSortedArrays(nums1 []int, nums2 []int) float64 {
  * Edge cases:
  *  - One list much longer than the other
 *   - Even lists much longer than other (both values from same list)
- */
+*/
 func findMedianSortedArraysOne(nums1 []int, nums2 []int) float64 {
 	combinedLen := len(nums1) + len(nums2)
 
@@ -43,10 +43,10 @@ func findMedianSortedArraysOne(nums1 []int, nums2 []int) float64 {
 		var a int
 		if val1 < val2 {
 			a = val1
-			val1 = extractValue(nums1, indexPtr1 + 1, math.MaxInt64)
+			val1 = extractValue(nums1, indexPtr1+1, math.MaxInt64)
 		} else {
 			a = val2
-			val2 = extractValue(nums2, indexPtr2 + 1, math.MaxInt64)
+			val2 = extractValue(nums2, indexPtr2+1, math.MaxInt64)
 		}
 
 		if val1 < val2 {
@@ -91,7 +91,7 @@ func walkLists(target int, nums1 []int, nums2 []int) (int, int) {
 }
 
 func isEven(n int) bool {
-	return n % 2 == 0
+	return n%2 == 0
 }
 
 func extractValue(nums []int, index int, defaultVal int) int {
@@ -102,11 +102,10 @@ func extractValue(nums []int, index int, defaultVal int) int {
 	}
 }
 
-
 /*
  * Approach Two: Compose sub-problems
  *
- * 1) Implement function to merge 2 sorted lists
+ * 1) Implement function to Merge 2 sorted lists
  * 2) Implement function to get median value of sorted list
  *
  * This approach is O(N), but results in orthogonal code that is re-usable in other solutions, and
@@ -116,20 +115,20 @@ func extractValue(nums []int, index int, defaultVal int) int {
 
 // Find median number in a sorted list
 func median(nums []int) (float64, error) {
-	isEven := len(nums) % 2 == 0
+	isEven := len(nums)%2 == 0
 	midpoint := len(nums) / 2
 
 	if len(nums) == 0 {
 		return 0.0, errors.New("given list cannot be empty")
 	} else if isEven {
-		return (float64(nums[midpoint - 1]) + float64(nums[midpoint])) / 2, nil
+		return (float64(nums[midpoint-1]) + float64(nums[midpoint])) / 2, nil
 	} else {
 		return float64(nums[midpoint]), nil
 	}
 }
 
 func findMedianSortedArraysTwo(nums1 []int, nums2 []int) float64 {
-	merged, err := merge([][]int{ nums1, nums2 })
+	merged, err := Merge([][]int{nums1, nums2})
 	if err != nil {
 		log.Panic(err)
 	}
