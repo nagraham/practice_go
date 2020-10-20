@@ -11,3 +11,5 @@ This directory contains different modules encapsulating little practice projects
 **Problem 3**: [Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/) -> leetcode/substr_wo_repeats.go
 
 **Problem 4**: [Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/) -> leetcode/sorted_array_median.go
+
+**Problem 5**: [Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/) -> leetcode/longest_palindrome.go
