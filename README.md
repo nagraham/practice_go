@@ -24,3 +24,5 @@ This directory contains different modules encapsulating little practice projects
 **Problem 8**: [String to Integer (atoi)](https://leetcode.com/problems/string-to-integer-atoi/) -> leetcode/my_atoi.go
 - Wrote up an [post](https://leetcode.com/problems/string-to-integer-atoi/discuss/911913/Golang-Clean-modular-solution-0ms).
 - > I try to decompose these problems down into independent subproblems, and enclose each of those problems in a small module -- a function or object. Ideally, the module should have a somewhat generic interface, decoupling it from the problem at hand. This makes it easier to understand, easier to test, easier to change, and possibly reusable.
+
+**Problem 9**: [Number Palindrome](https://leetcode.com/problems/palindrome-number/) -> leetcode/int_palindrome.go
