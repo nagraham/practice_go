@@ -1,4 +1,4 @@
-package main
+package concurrency
 
 import (
 	"fmt"
@@ -26,7 +26,7 @@ func createMessages(messages chan string) {
 	}
 }
 
-func main() {
+func printMessages() {
 	messages := make(chan string)
 	quit := make(chan string)
 	go printMessage(messages, quit)
