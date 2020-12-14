@@ -73,17 +73,17 @@ func lengthOfLongestSubstring(s string) int {
 
 		// if lastOccurrence < start, we have already found another duplicate rune
 		if hasDuplicate && lastOccurrence >= start {
-			maxLen = maxInt(maxLen, len(s[start:i]))
+			maxLen = MaxInt(maxLen, len(s[start:i]))
 			start = lastOccurrence + 1
 		}
 		runeMap[r] = i
 	}
 
-	maxLen = maxInt(maxLen, len(s[start:]))
+	maxLen = MaxInt(maxLen, len(s[start:]))
 
 	return maxLen
 }
 
-func maxInt(a, b int) int {
+func MaxInt(a, b int) int {
 	return int(math.Max(float64(a), float64(b)))
 }

@@ -26,3 +26,14 @@ This directory contains different modules encapsulating little practice projects
 - > I try to decompose these problems down into independent subproblems, and enclose each of those problems in a small module -- a function or object. Ideally, the module should have a somewhat generic interface, decoupling it from the problem at hand. This makes it easier to understand, easier to test, easier to change, and possibly reusable.
 
 **Problem 9**: [Number Palindrome](https://leetcode.com/problems/palindrome-number/) -> leetcode/int_palindrome.go
+
+**Problem 11**: [Container with Most Water](https://leetcode.com/problems/container-with-most-water/) -> leetcode/water_container.go
+- I decomposed this into two functions: the main solution (containing the iteration) and a function to find the area from the array and ints. This helped me to focus on the part that needed to be optimized: the iteration
+- The first solution was O(n^2) and complicated (more rules based). It didn't solve the quadratic nature of the problem.
+- A few hours later, it occurred to me to ask: "how to do this in one loop?" And then I realized that because any value needed a lot of length or else another "high" value, you could walk the list with two pointers, keeping in place the index with the highest value. Store the max area as you go.
+- Strategy for interviews:
+    - Obviously there will be a brilliant, order of magnitiude solution based on hte nature of the problem (e.g. "the trick"). But don't go for gold at first.
+    - First, *decompose the problem*, break into general pieces, make basic abstractions, write out the "master control" algorithm. This will win big points on its own and show confidence. 
+    - Code the modules/functions that are straightforward. Get code on the board, so everyone feels progress has been made.
+    - Encapsulate the O(n^2) part of the solution. Even write it, or pseudocode it to prove you can do it. Then iterate and ask, "how to make this an order of magnitude better?"
+     
