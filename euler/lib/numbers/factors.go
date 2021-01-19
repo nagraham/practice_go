@@ -30,3 +30,37 @@ func Factors(num int) []int {
 
 	return append(lowFactors, Reverse(highFactors)...)
 }
+
+// Returns the least common multiple for thw two integers, which is the smallest
+// number that can be divided cleanly by both values.
+// If either of the numbers are zero, or less, the result is -1
+func LeastCommonMultiple(a int, b int) int {
+	if a < 1 || b < 1 {
+		return -1
+	}
+	return a * b / GreatestCommonDivisor(a, b)
+}
+
+// Returns the greatest common divisor, which is the largest number that
+// cleanly divides both values.
+// If either of the numbers are zero, or less, the result is -1
+func GreatestCommonDivisor(a int, b int) int {
+	if a < 1 || b < 1 {
+		return -1
+	}
+
+	dividend := MaxInt(a, b)
+	divisor := MinInt(a, b)
+	remainder := -1
+
+	for {
+		remainder = dividend % divisor
+		if remainder == 0 {
+			break
+		}
+		dividend = divisor
+		divisor = remainder
+	}
+
+	return divisor
+}
