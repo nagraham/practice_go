@@ -1,7 +1,7 @@
 package euler
 
 import (
-	"euler/lib/numbers"
+	"euler/lib/integers"
 	"euler/lib/strings"
 	"strconv"
 )
@@ -25,7 +25,7 @@ func LargestPalindromeProduct() int {
 		for j := 0; j <= i; j++ {
 			prod := (maxNum-i) * (maxNum-j)
 			if strings.IsPalindrome(strconv.Itoa(prod)) {
-				largestPalindrome = numbers.MaxInt(largestPalindrome, prod)
+				largestPalindrome = integers.MaxInt(largestPalindrome, prod)
 			}
 		}
 	}

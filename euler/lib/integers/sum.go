@@ -1,4 +1,4 @@
-package numbers
+package integers
 
 // Sum up a slice of numbers
 func Sum(nums []int) int {

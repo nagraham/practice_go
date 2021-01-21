@@ -1,7 +1,4 @@
-package numbers
-
-// A function that takes an int
-type IntFunction = func(n int) int
+package integers
 
 // A function that evaluates a number and returns true or false based on
 // its condition expressions.
@@ -22,7 +19,7 @@ func Filter(nums []int, filter Condition) []int {
 
 // A Mapping function that loops through each number, applies the given mapper function,
 // and returns a list of those results.
-func Map(nums []int, mapper IntFunction) []int {
+func Map(nums []int, mapper func(n int) int) []int {
 	mappedNums := make([]int, len(nums))
 	for i, n := range nums {
 		mappedNums[i] = mapper(n)

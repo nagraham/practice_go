@@ -1,4 +1,4 @@
-package numbers
+package integers
 
 // Returns true if the number is even. This signature is of type Condition.
 func IsEven(num int) bool {

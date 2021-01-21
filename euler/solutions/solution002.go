@@ -1,8 +1,8 @@
 package euler
 
 import (
-	"euler/lib/fibonacci"
-	"euler/lib/numbers"
+	"euler/lib/integers"
+	"euler/lib/integers/fibonacci"
 )
 
 func EvenFibonacciSum() int {
@@ -10,10 +10,10 @@ func EvenFibonacciSum() int {
 	fibs := fibonacci.UpTo(4000000)
 
 	// filter out odd numbers
-	evenFibs := numbers.Filter(fibs, numbers.IsEven)
+	evenFibs := integers.Filter(fibs, integers.IsEven)
 
 	// sum the numbers
-	return numbers.Sum(evenFibs)
+	return integers.Sum(evenFibs)
 }
 
 func EvenFibonacciSumTwo() int {

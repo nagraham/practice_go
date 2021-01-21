@@ -1,4 +1,4 @@
-package numbers
+package integers
 
 import (
 	"github.com/stretchr/testify/assert"
@@ -60,6 +60,49 @@ func TestIsPrime(t *testing.T) {
 		t.Run(name, func(t *testing.T) {
 			result := IsPrime(cond.num)
 			assert.Equal(t, cond.expectedResult, result)
+		})
+	}
+}
+
+func TestNthPrime(t *testing.T) {
+	testConditions := map[string]struct {
+		n int
+		expectedPrime int
+	} {
+		"when zero": {
+			n: 0,
+			expectedPrime: 0,
+		},
+		"when one": {
+			n: 1,
+			expectedPrime: 2,
+		},
+		"when two": {
+			n: 2,
+			expectedPrime: 3,
+		},
+		"when fifty": {
+			n: 50,
+			expectedPrime: 229,
+		},
+		"when fifty-one": {
+			n: 51,
+			expectedPrime: 233,
+		},
+		"when seventy-seven": {
+			n: 77,
+			expectedPrime: 389,
+		},
+		"when one-hundred": {
+			n: 100,
+			expectedPrime: 541,
+		},
+	}
+
+	for name, cond := range testConditions {
+		t.Run(name, func(t *testing.T) {
+			result := NthPrime(cond.n)
+			assert.Equal(t, cond.expectedPrime, result)
 		})
 	}
 }
